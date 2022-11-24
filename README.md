@@ -2,12 +2,16 @@
 ### Tech task by Andrii Orlov
 
 ## Features
-- Upload multiple contracts via UI
-- Responsive design
-- Date visualisation using calendar
-- Ability to check the text snippet where the date has been parsed from
-- Ability to check the original contract
-- Ability to filter dates on the Calendar by checking/unchecking contracts they belong to
+- Saving uploaded contracts
+- Parsing dates from every contract
+- The line where date been found serves as a text snippet
+
+## Tech stack
+- aiofiles (to save uploaded pdfs)
+- pdfplumber (reading and parsing pdfs)
+- datefinder (parsing dates)
+- fastapi (server)
+- pytest (tests)
 
 ## Installation
 It is better to use Dockerfile since everything is predefined there and any problems with running server should not be raised

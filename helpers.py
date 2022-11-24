@@ -12,9 +12,9 @@ async def save_single_contract(file: UploadFile, directory: Path) -> dict:
     :return: dict with title and saved path
     """
     file_location = f'{directory}/{file.filename}'
-    async with aiofiles.open(file_location, 'wb') as out_file:
+    async with aiofiles.open(file_location, 'wb') as saved_file:
         content = await file.read()
-        await out_file.write(content)
+        await saved_file.write(content)
         saved_contract_data = {'title': file.filename, 'path': file_location}
     return saved_contract_data
 
